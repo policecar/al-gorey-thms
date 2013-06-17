@@ -1,12 +1,12 @@
 ## al-gorey-thms
 
-A collection of delightful algorithms or curious implementations.
+A collection of delightful algorithms and dark implementations.
 
 
 ### Contents
 
 * [Fibonacci](https://en.wikipedia.org/wiki/Fibonacci_sequence): 
-  a #wtf JavaScript implementation, cf. http://wtfjs.com/2013/02/12/obfuscated-fibonacci
+  a #wtf JavaScript implementation based on +[], cf. http://wtfjs.com/2013/02/12/obfuscated-fibonacci
 
 * [Sequitur](http://arxiv.org/pdf/cs.AI/9709102.pdf): 
   an implementation in about 300 characters of Perl, found in a footnote of 
