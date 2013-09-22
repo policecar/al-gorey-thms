@@ -21,3 +21,14 @@ of Perl, found in a footnote of
 [Surreptitious Software](http://books.google.de/books?id=mig-bH3u0Z0C&printsec=frontcover&dq=isbn:0132702037)
 
 ---
+
+[MinRay](http://www.cs.utah.edu/~aek/code/card.cpp): a ray tracer the size of a business card or in 1337 bytes  
+s.a. [Fabien Sanglard's analysis](http://fabiensanglard.net/rayTracing_back_of_business_card/index.php)
+and [Paul Heckbert's minimal ray tracer](https://www.cs.cmu.edu/~ph/)
+```cpp
+c++ -O3 -o minray minray.cpp  
+./minray > aek.ppm
+```
+
+
+---
