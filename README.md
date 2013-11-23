@@ -2,6 +2,8 @@
 
 A collection of delightful algorithms and dark implementations.
 
+Work in progress!
+
 
 ### Contents
 
