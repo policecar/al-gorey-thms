@@ -28,7 +28,7 @@ perl sequitur.pl aabaaab
 
 ---
 
-[MinRay](http://www.cs.utah.edu/~aek/code/card.cpp): a ray tracer the size of a business card or in 1337 bytes  
+[MinRay](http://www.cs.utah.edu/~aek/code/card.cpp): a ray tracer the size of a business card in 1337 bytes  
 s.a. [Fabien Sanglard's analysis](http://fabiensanglard.net/rayTracing_back_of_business_card/index.php)
 and [Paul Heckbert's minimal ray tracer](https://www.cs.cmu.edu/~ph/)
 ```cpp
