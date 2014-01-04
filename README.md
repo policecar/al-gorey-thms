@@ -1,6 +1,7 @@
 ## al-gorey-thms
 
-A collection of delightful algorithms and dark implementations.
+A collection of delightful algorithms and dark implementations  
+(reminiscent, to this author, of Edward Gorey's illustrations).
 
 
 
