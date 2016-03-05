@@ -16,7 +16,7 @@ use Algorithm::MarkovChain;
 use Path::Class;
 use autodie; # die if problem reading or writing a file
 
-my @inputs = qw(king_james_bible.txt lovecraft_incomplete.txt); 
+my @inputs = qw(king_james_bible.txt lovecraft_complete.txt); 
 my $dir = dir(".");
 my $f = "";
 my @symbols = ();
