@@ -43,3 +43,9 @@ ruby hello-world.rb
 ```
 
 ---
+[Lovebible](http://www.antipope.org/charlie/blog-static/2013/12/lovebiblepl.html): Charlie Stross' Markov chain generator, originally seeded with the King James Bible and the complete works of H. P. Lovecraft.
+```perl
+cpan Algorithm::MarkovChain
+perl lovebible.pl 2> /dev/null
+```
+---
