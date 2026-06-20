@@ -15,6 +15,10 @@ A collection of delightful algorithms and dark implementations
 js> +[] 
 0
 ```
+The file only defines `fib` (so `node fibonacci.js` prints nothing); load it, then call it:
+```javascript
+node -e 'eval(require("fs").readFileSync("fibonacci.js","utf8")); console.log(fib(10))'
+```
 
 ---
 
