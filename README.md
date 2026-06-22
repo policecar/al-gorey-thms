@@ -15,6 +15,10 @@ A collection of delightful algorithms and dark implementations
 js> +[] 
 0
 ```
+The file only defines `fib` (so `node fibonacci.js` prints nothing); load it, then call it:
+```javascript
+node -e 'eval(require("fs").readFileSync("fibonacci.js","utf8")); console.log(fib(10))'
+```
 
 ---
 
@@ -45,7 +49,7 @@ ruby hello-world.rb
 ---
 [Lovebible](http://www.antipope.org/charlie/blog-static/2013/12/lovebiblepl.html): Charlie Stross' Markov chain generator, originally seeded with the King James Bible and the complete works of H. P. Lovecraft. ( The King James corpus was copied from [here](https://raw.githubusercontent.com/wiseman/initialisms/master/corpora/bible-kjv.txt) and Lovecraft from [here](https://github.com/nathanielksmith/lovecraftcorpus). )
 ```perl
-cpan Algorithm::MarkovChain
+# Algorithm::MarkovChain is vendored under ./lib — no install needed
 perl lovebible.pl 2> /dev/null
 ```
 ---
