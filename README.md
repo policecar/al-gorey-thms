@@ -120,3 +120,9 @@ cc -o quantum_bogosort quantum_bogosort.c
 ```
 
 ---
+[Josephus problem](https://en.wikipedia.org/wiki/Josephus_problem): the cave at Yodfat, 67 AD — forty-one men in a circle, every third one slain, and Flavius Josephus, "whether by fortune or by the providence of God," reckoning his way to seat 31. In sed, because a stream editor is precisely a machine for striking names from a list.
+```
+seq 41 | sed -E -f josephus.sed
+```
+
+---
