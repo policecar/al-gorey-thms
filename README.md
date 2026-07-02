@@ -89,7 +89,13 @@ node -e 'console.log(String(require("apl")(require("fs").readFileSync("life.apl"
 ---
 [Twelve Days of Christmas](https://www.ioccc.org/years.html#1988): Ian Phillipps' 1988 IOCCC winner — one recursive main(), two cipher strings, the entire carol. Transcribed from its many reproductions and verified by its own singing: a wrong byte anywhere and the true love brings garbage.
 ```
-gcc -std=gnu89 -w -o twelve_days twelve_days.c
+gcc -std=gnu89 -w -o twelve_days twelve_days.c    # GNU gcc shrugs at a K&R main
+./twelve_days
+```
+clang (which is what macOS hands you when you ask for `gcc`) refuses a `main` with such parameters outright, as it refuses most things from 1988. Rename the carol and enter it through a side door:
+```
+cc -std=gnu89 -w -Dmain=sing -c twelve_days.c
+echo 'int sing(); int main(void){ return sing(1,0,(char*)0); }' | cc -w -xc - -xnone twelve_days.o -o twelve_days
 ./twelve_days
 ```
 
