@@ -126,3 +126,10 @@ seq 41 | sed -E -f josephus.sed
 ```
 
 ---
+[Reservoir sampling](https://en.wikipedia.org/wiki/Reservoir_sampling): Algorithm R (A. G. Waterman; s. Knuth, TAOCP vol. 2, §3.4.2), in FORTRAN 77. Ten verses drawn by lot from the King James Bible in a single pass: each chosen verse may at any moment be struck from the reservoir by a later one, and the stream is read once and never again.
+```
+gfortran -std=legacy -o reservoir reservoir.f
+./reservoir < king_james_bible.txt
+```
+
+---
