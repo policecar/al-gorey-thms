@@ -145,3 +145,9 @@ bwbasic drunkard.bas
 ```
 
 ---
+[Malbolge](https://esolangs.org/wiki/Malbolge): Ben Olmstead, 1998 — the language named for the eighth circle of Hell, designed so that programming in it be practically impossible. It worked: no human wrote the first Malbolge program. `hello.mb` was *found*, two years later, by Andrew Cooke's beam search over the space of programs, and prints — for reasons no one chose — `HEllO WORld`. The interpreter is a faithful reimplementation of Olmstead's reference (his permutation tables verbatim); the program corrodes itself as it runs.
+```
+cc -o malbolge malbolge.c
+./malbolge hello.mb
+```
+---
