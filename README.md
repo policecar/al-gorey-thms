@@ -73,3 +73,10 @@ awk -f queneau.awk sonnets_dark.txt
 ```
 
 ---
+[The Library of Babel](https://libraryofbabel.info): Borges, 1941, taken literally (after Jonathan Basile, 2015): an invertible bijection between every possible 3200-character page and its shelf address. Nothing is stored, nothing is generated — the page containing your death notice, correctly dated, has an address you can compute tonight.
+```
+perl babel.pl demo
+perl babel.pl find 'there is nothing new under the sun'
+```
+
+---
