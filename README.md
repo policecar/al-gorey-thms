@@ -139,3 +139,9 @@ bwbasic drunkard.bas
 ```
 
 ---
+[Dining Philosophers](https://en.wikipedia.org/wiki/Dining_philosophers_problem): Dijkstra's problem (EWD310, 1971) in [occam 2](https://en.wikipedia.org/wiki/Occam_(programming_language)), the language INMOS built for the Transputer, where parallelism is not a library but the grammar. Five philosophers, five forks, and Peter Welch's butler who never seats more than four — which is all it takes for deadlock never to come. Requires KRoC, or a Transputer, whichever you can exhume in better condition; best enjoyed the way most occam now is: read, at a wake.
+```
+# kroc philosophers.occ  (bring your own archaeology)
+```
+
+---
