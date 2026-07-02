@@ -87,3 +87,10 @@ node -e 'console.log(String(require("apl")(require("fs").readFileSync("life.apl"
 ```
 
 ---
+[Twelve Days of Christmas](https://www.ioccc.org/years.html#1988): Ian Phillipps' 1988 IOCCC winner — one recursive main(), two cipher strings, the entire carol. Transcribed from its many reproductions and verified by its own singing: a wrong byte anywhere and the true love brings garbage.
+```
+gcc -std=gnu89 -w -o twelve_days twelve_days.c
+./twelve_days
+```
+
+---
