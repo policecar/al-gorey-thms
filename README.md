@@ -133,3 +133,9 @@ gfortran -std=legacy -o reservoir reservoir.f
 ```
 
 ---
+[Drunkard's Walk](https://en.wikipedia.org/wiki/Random_walk): a one-dimensional random walk in line-numbered BASIC, in the manner of [101 BASIC Computer Games](https://archive.org/details/bitsavers_decBooks10Mar75_26006648) (DEC, 1973). The tavern at 20, home at 40, the canal at 0. The theorem guarantees he arrives somewhere with probability one; the theorem does not say where.
+```
+bwbasic drunkard.bas
+```
+
+---
