@@ -107,3 +107,9 @@ sbcl --script quine.lisp
 ```
 
 ---
+[Sleep sort](https://web.archive.org/web/2011/http://dis.4chan.org/read/prog/1295544154): posted by Anonymous to 4chan's /prog/ on 20 January 2011 at 12:22. Each number sleeps for its own value, then announces itself; time is the comparator, the scheduler is the sorting network. First reply, 12:27: "Oh god, it works."
+```
+./sleepsort.sh 5 3 6 3 6 3 1 4 7
+```
+
+---
