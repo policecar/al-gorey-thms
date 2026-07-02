@@ -113,3 +113,10 @@ sbcl --script quine.lisp
 ```
 
 ---
+[Quantum bogosort](https://en.wikipedia.org/wiki/Bogosort#Related_algorithms): shuffle; if the list is not sorted, destroy the universe. Implemented with real fork(): unsorted branches of the multiverse are annihilated, and you — necessarily — are reading this in a branch where the list came out sorted, in O(n). It has never once been observed to fail.
+```
+cc -o quantum_bogosort quantum_bogosort.c
+./quantum_bogosort 9 1 8 6 6 2 0 4
+```
+
+---
