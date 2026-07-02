@@ -67,3 +67,9 @@ emacs --batch -l dissociate.el --eval '(progn (random t) (find-file "lovecraft_c
 ```
 
 ---
+[Cent mille milliards de poèmes](https://en.wikipedia.org/wiki/Hundred_Thousand_Billion_Poems): Raymond Queneau's 1961 book-machine — ten sonnets cut into fourteen strips, 10^14 poems, about 190 million years of continuous reading. Queneau's own sonnets sleep in copyright until the 2040s, so the machine is fitted with the ten darkest sonnets of Shakespeare (60, 64, 65, 66, 71, 73, 74, 90, 129, 146), a substitution the Oulipo would be obliged to permit. In awk, 1977.
+```
+awk -f queneau.awk sonnets_dark.txt
+```
+
+---
