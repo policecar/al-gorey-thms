@@ -52,4 +52,12 @@ ruby hello-world.rb
 # Algorithm::MarkovChain is vendored under ./lib — no install needed
 perl lovebible.pl 2> /dev/null
 ```
+
+---
+[Travesty](https://archive.org/details/byte-magazine-1984-11): Hugh Kenner & Joseph O'Rourke's drivel generator from BYTE, November 1984 — ancestor of every Markov mangler above, reconstructed in the manner of the original Pascal listing. No tables are built, for the micro has no memory to spare: for every letter emitted the whole text is searched anew, and English decays into an author-shaped residue.
+```
+fpc -Mtp -v0 travesty.pas
+./travesty lovecraft_complete.txt 5 600
+```
+
 ---
