@@ -94,3 +94,9 @@ gcc -std=gnu89 -w -o twelve_days twelve_days.c
 ```
 
 ---
+[Duff's Device](https://en.wikipedia.org/wiki/Duff%27s_device): Tom Duff, Lucasfilm, November 1983 — a do-while and a switch occupying the same body, like a man and his ghost. The artifact is really the email ("I feel a combination of pride and revulsion at this discovery"); the harness merely confirms its central claim.
+```
+gcc -std=gnu89 -w -o duff duff.c && ./duff
+```
+
+---
