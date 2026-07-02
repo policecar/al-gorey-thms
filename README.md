@@ -80,3 +80,10 @@ perl babel.pl find 'there is nothing new under the sun'
 ```
 
 ---
+[Game of Life](https://aplwiki.com/wiki/John_Scholes%27_Conway%27s_Game_of_Life): John Scholes' one line of Dyalog APL (2009), and the same organism re-inscribed in [BQN](https://mlochbaum.github.io/BQN/), Marshall Lochbaum's APL descendant — two generations of hieroglyphs for one deathless automaton. The APL runs on the long-abandoned npm package `apl` (ngn/apl, an APL written in JavaScript, last touched 2016); the BQN wants [CBQN](https://github.com/dzaima/CBQN).
+```
+npm install apl
+node -e 'console.log(String(require("apl")(require("fs").readFileSync("life.apl","utf8"))))'
+```
+
+---
