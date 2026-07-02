@@ -61,3 +61,9 @@ fpc -Mtp -v0 travesty.pas
 ```
 
 ---
+[Dissociated Press](https://www.gnu.org/software/emacs/manual/html_node/emacs/Dissociated-Press.html): the travesty generator that has shipped inside GNU Emacs since 1985, waiting quietly behind `M-x` for forty years. Vendored verbatim from `lisp/play/dissociate.el` (GPL, © FSF).
+```
+emacs --batch -l dissociate.el --eval '(progn (random t) (find-file "lovecraft_complete.txt") (defalias (quote y-or-n-p) (lambda (&rest _) nil)) (dissociated-press 2) (with-current-buffer "*Dissociation*" (princ (buffer-string))))'
+```
+
+---
