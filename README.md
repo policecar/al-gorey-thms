@@ -88,16 +88,13 @@ node -e 'console.log(String(require("apl")(require("fs").readFileSync("life.apl"
 
 ---
 [Twelve Days of Christmas](https://www.ioccc.org/years.html#1988): Ian Phillipps' 1988 IOCCC winner — one recursive main(), two cipher strings, the entire carol. Transcribed from its many reproductions and verified by its own singing: a wrong byte anywhere and the true love brings garbage.
-```
-gcc -std=gnu89 -w -o twelve_days twelve_days.c    # GNU gcc shrugs at a K&R main
-./twelve_days
-```
-clang (which is what macOS hands you when you ask for `gcc`) refuses a `main` with such parameters outright, as it refuses most things from 1988. Rename the carol and enter it through a side door:
+Modern compilers refuse a 1988 `main` outright (clang — which is what macOS hands you when you ask for `gcc` — refuses most things from 1988), so the carol is renamed at preprocessing time and entered through a side door. Works under GNU gcc and clang alike:
 ```
 cc -std=gnu89 -w -Dmain=sing -c twelve_days.c
 echo 'int sing(); int main(void){ return sing(1,0,(char*)0); }' | cc -w -xc - -xnone twelve_days.o -o twelve_days
 ./twelve_days
 ```
+( Under a true GNU gcc, which merely shrugs at K&R, the direct way still works: `gcc -std=gnu89 -w -o twelve_days twelve_days.c` )
 
 ---
 [Duff's Device](https://en.wikipedia.org/wiki/Duff%27s_device): Tom Duff, Lucasfilm, November 1983 — a do-while and a switch occupying the same body, like a man and his ghost. The artifact is really the email ("I feel a combination of pride and revulsion at this discovery"); the harness merely confirms its central claim.
