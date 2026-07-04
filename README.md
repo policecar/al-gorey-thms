@@ -105,7 +105,7 @@ gcc -std=gnu89 -w -o duff duff.c && ./duff
 ---
 [Quine](https://en.wikipedia.org/wiki/Quine_(computing)): the ouroboros, twice. In C, a program whose output is byte-identical to its own source; in Lisp, the older folklore form — author unknown, oral tradition since the 1960s — which does not print itself because it *is* itself: a fixed point of eval.
 ```
-gcc -w -o quine quine.c && ./quine | diff quine.c - && echo it lives
+cc -std=gnu89 -w -o quine quine.c && ./quine | diff quine.c - && echo it lives
 sbcl --script quine.lisp
 ```
 
