@@ -1,0 +1,67 @@
+-- The Dining Philosophers, in occam 2.
+--
+-- Dijkstra posed it (EWD310, 1971); Hoare set the table; and occam --
+-- the language INMOS built for the Transputer, in which parallelism is
+-- not a library but the grammar itself -- served it as its national
+-- dish.  This is the classic solution as taught with the language for
+-- decades by Peter Welch (University of Kent): five philosophers, five
+-- forks, and a butler who never permits more than four to sit, which is
+-- all it takes for deadlock never to come.
+--
+-- occam is written here as a reconstruction from the folk memory of the
+-- Transputer age.  To run it you will need KRoC, the Kent Retargetable
+-- occam Compiler -- or a Transputer, which is somehow the easier of the
+-- two to find in good condition.  The program is best enjoyed the way
+-- most occam now is: read, at a wake.
+--
+-- ( The philosophers think forever and eat forever in silence; there is
+--   no PRINT here, only protocol.  Starvation is prevented; what the
+--   philosophers are for is not addressed in this or any solution. )
+
+PROC fork (CHAN OF INT left, right)
+  WHILE TRUE
+    INT any:
+    ALT
+      left ? any                     -- picked up by the left philosopher
+        left ? any                   -- put down again; the fork forgets
+      right ? any                    -- picked up by the right
+        right ? any                  -- put down; nothing accumulates
+:
+
+PROC philosopher (CHAN OF INT left, right, down, up)
+  WHILE TRUE
+    SEQ
+      SKIP                           -- thinks (indistinguishable from SKIP)
+      down ! 0                       -- reports to the butler and sits
+      PAR
+        left ! 0                     -- both forks, in either order,
+        right ! 0                    --   the PAR does not care
+      SKIP                           -- eats (see thinking)
+      PAR
+        left ! 0                     -- forks returned
+        right ! 0
+      up ! 0                         -- rises; the butler strikes his count
+:
+
+PROC butler ([5]CHAN OF INT down, up)
+  INT seated, any:
+  SEQ
+    seated := 0
+    WHILE TRUE
+      ALT i = 0 FOR 5
+        ALT
+          (seated < 4) & down[i] ? any   -- a fifth shall not sit,
+            seated := seated + 1         --   and so none shall starve
+          up[i] ? any
+            seated := seated - 1
+:
+
+PROC college ()
+  [5]CHAN OF INT left, right, down, up:
+  PAR
+    PAR i = 0 FOR 5
+      philosopher (left[i], right[i], down[i], up[i])
+    PAR i = 0 FOR 5
+      fork (left[i], right[(i + 1) \ 5])
+    butler (down, up)
+:
